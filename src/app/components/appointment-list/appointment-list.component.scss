@@ -1,0 +1,19 @@
+.card-container {
+   margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:  20px;
+    padding-left:24px;
+  }
+
+  
+  .card-data {
+    border: 1px solid; 
+    margin-bottom: 10px; 
+    border-radius: 4px;
+  }
+
+  .p-button-success{
+    float: right;
+  }
+  
