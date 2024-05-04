@@ -1,0 +1,35 @@
+<div class="form">
+    <form [formGroup]="EditForm" (ngSubmit)="onUpdate()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input pInputText type="text" id="name" name="name" onkeydown="return/[a-z]/i.test(event.key)"  placeholder="Enter your name" formControlName="name">
+
+        </div>
+        <div class="form-group">
+            <label for="appointment">Appointment:</label>
+            <p-calendar formControlName="appointment" dateFormat="yy-mm-dd"  [readonlyInput]="true" inputId="appointment"
+              [showTime]="true"   class="calender" ></p-calendar>
+        </div>
+
+        <div class="form-group">
+            <label for="facility">facility:</label>
+            <input pInputText type="facility" onkeydown="return/[a-z]/i.test(event.key)" id="facility" name="facility" placeholder="Enter your facility"
+                formControlName="facility">
+        </div>
+        <div class="form-group">
+            <label for="resource">Resource:</label>
+            <input pInputText type="resource" onkeydown="return/[a-z]/i.test(event.key)" id="resource" name="resource" placeholder="Enter your resource"
+                formControlName="resource">
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <input pInputText type="status" onkeydown="return/[a-z]/i.test(event.key)" id="status" name="status" placeholder="Enter your appointment"
+                formControlName="status">
+        </div>
+        <div class="login-btn">
+            <button *ngIf="appointmentUserData" pButton type="submit">Update</button>
+            <button *ngIf="!appointmentUserData" pButton type="submit">Save</button>
+        </div>
+
+    </form>
+</div>
